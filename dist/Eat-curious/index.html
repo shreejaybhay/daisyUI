@@ -68,7 +68,7 @@
                 .ticker {
                         background-color: #ff73b5;
                         color: #042f1a;
-                        z-index: 100;
+                        z-index: 200;
                         text-transform: uppercase;
                         letter-spacing: .01rem;
                         padding: 0.7em 0 1.1em 0;
@@ -160,6 +160,27 @@
                         -o-border-radius: 150%;
 
                 }
+
+                .footer-bottom:before {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        width: 150vw;
+                        left: 50%;
+                        top: 0;
+                        height: 0;
+                        padding-bottom: 132%;
+                        -webkit-transform: translateX(-50%);
+                        -moz-transform: translateX(-50%);
+                        -o-transform: translateX(-50%);
+                        -ms-transform: translateX(-50%);
+                        transform: translateX(-50%);
+                        background-color: #ff73b5;
+                        border-radius: 150%;
+                        -moz-border-radius: 150%;
+                        -webkit-border-radius: 150%;
+                        -o-border-radius: 150%;
+                }
         </style>
 </head>
 
@@ -205,7 +226,7 @@
                                 </button>
                         </nav>
 
-                        <div class="flex flex-col items-center justify-start w-full h-auto -translate-y-20">
+                        <div class="flex flex-col items-center justify-start w-full h-auto -translate-y-16 ">
 
                                 <h1
                                         class="text-[190px] whitespace-nowrap font-extrabold uppercase text-[#fff6f6] font-[heading] ">
@@ -652,99 +673,112 @@
                         </div>
                 </div>
 
-                <div class="page2 w-full h-auto bg-[#042F1A]">
-                        <img class="w-screen mt-0"
-                                src="data:image/svg+xml,%3Csvg viewBox='0 0 2868 139' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2868 139V43.0056C2868 53.8541 2752.86 50.0576 2649.42 16.9689C2551.18 -14.4606 2490.72 4.91814 2432.72 23.5073C2390.62 37.0006 2349.81 50.0778 2296.8 43.0057C2241.32 35.6046 2207.84 26.8376 2179.21 19.3408C2142.79 9.80471 2114.22 2.32386 2058.22 2.32386C2009.77 2.32387 1968.12 15.1762 1927.77 27.6295C1884.81 40.8875 1843.31 53.6933 1796.63 50.0572C1757.78 47.0316 1726.77 36.9158 1695.56 26.7368C1654.03 13.1927 1612.15 -0.463273 1551.04 2.32391C1502.46 4.53995 1476.32 20.0239 1453.49 33.5533C1436.08 43.8676 1419.88 49.25 1397.25 52.25L1372.25 54.1269C1341.08 54.4432 1324.58 49.9698 1221.42 16.9691C1123.18 -14.4603 1062.72 4.91841 1004.72 23.5076C962.615 37.0008 921.813 50.0781 868.802 43.0059C813.325 35.6049 779.843 26.8379 751.213 19.341C714.794 9.80498 686.224 2.32412 630.219 2.32412C581.767 2.32413 540.121 15.1764 499.768 27.6297C456.807 40.8878 415.312 53.6936 368.629 50.0575C329.785 47.0319 298.767 36.9161 267.556 26.7371C226.027 13.1929 184.154 -0.463011 123.044 2.32417C37.4142 6.22965 5.33636 43.0669 0.00117248 55.0002L0 139L2868 139Z' fill='%23ff73b5'/%3E%3C/svg%3E%0A">
-                        <div class="h-screen w-full bg-[#FF73B5] py-[120px] px-[107px] grid grid-cols-2">
+
+                <div class="">
+
+                        <div class="page2 w-full h-auto bg-[#042F1A] sticky bottom-0 z-50">
+                                <img class="w-screen mt-0"
+                                        src="data:image/svg+xml,%3Csvg viewBox='0 0 2868 139' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2868 139V43.0056C2868 53.8541 2752.86 50.0576 2649.42 16.9689C2551.18 -14.4606 2490.72 4.91814 2432.72 23.5073C2390.62 37.0006 2349.81 50.0778 2296.8 43.0057C2241.32 35.6046 2207.84 26.8376 2179.21 19.3408C2142.79 9.80471 2114.22 2.32386 2058.22 2.32386C2009.77 2.32387 1968.12 15.1762 1927.77 27.6295C1884.81 40.8875 1843.31 53.6933 1796.63 50.0572C1757.78 47.0316 1726.77 36.9158 1695.56 26.7368C1654.03 13.1927 1612.15 -0.463273 1551.04 2.32391C1502.46 4.53995 1476.32 20.0239 1453.49 33.5533C1436.08 43.8676 1419.88 49.25 1397.25 52.25L1372.25 54.1269C1341.08 54.4432 1324.58 49.9698 1221.42 16.9691C1123.18 -14.4603 1062.72 4.91841 1004.72 23.5076C962.615 37.0008 921.813 50.0781 868.802 43.0059C813.325 35.6049 779.843 26.8379 751.213 19.341C714.794 9.80498 686.224 2.32412 630.219 2.32412C581.767 2.32413 540.121 15.1764 499.768 27.6297C456.807 40.8878 415.312 53.6936 368.629 50.0575C329.785 47.0319 298.767 36.9161 267.556 26.7371C226.027 13.1929 184.154 -0.463011 123.044 2.32417C37.4142 6.22965 5.33636 43.0669 0.00117248 55.0002L0 139L2868 139Z' fill='%23ff73b5'/%3E%3C/svg%3E%0A">
+                                <div class="h-screen w-full bg-[#FF73B5] py-[120px] px-[107px] grid grid-cols-2">
+                                        <div class="relative flex flex-col items-start justify-center ">
+                                                <img class="absolute -top-20 -right-16 rotate-12"
+                                                        src="data:image/svg+xml,%3Csvg width='90px' height='110px' viewBox='0 0 41 64' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.44531 5.56149C9.2181 2.6463 16.7405 1.48086 24.0853 2.21287C28.2019 2.62061 32.4511 3.71542 35.4918 6.5054C38.8555 9.59396 40.232 14.6506 38.7812 18.9784C37.4014 23.0944 33.1587 26.8122 28.6834 26.9856C25.6912 27.1012 21.0899 24.3593 22.8606 20.8309C24.2178 18.1244 28.7642 18.3106 31.2458 18.8596C33.9666 19.4632 36.5032 21.0492 37.9508 23.454C42.956 31.7597 34.3834 39.9916 27.0742 42.788C23.4455 44.1782 19.6326 45.273 15.7356 45.5394C12.3622 45.7706 7.39566 45.5844 5.07559 42.6981C2.04141 38.9257 7.09836 34.8579 10.5849 34.296C18.3562 33.0407 26.2406 38.7234 26.2438 46.7659C26.247 54.9464 18.3368 60.2663 11.0955 62' stroke='%23FFFFFF' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A"
+                                                        alt="">
+                                                <h1
+                                                        class="text-[56px] font-extrabold text-[#042f1a] font-[heading] uppercase leading-[50px] tracking-wide">
+                                                        curioys...
+                                                        by name, by nature</h1>
+                                                <p
+                                                        class="text-[#042f1a] font-[Rubik] text-xl font-light leading-[28.8px] text-left max-w-[392px] mt-[25px]">
+                                                        It’s what inspires us to whip up, throw together, tear, shake,
+                                                        and break
+                                                        the
+                                                        rules – on a mission to redefine food for a new generation.</p>
+                                        </div>
+                                        <div class="flex items-start justify-center ">
+                                                <img width="460px"
+                                                        src="https://eat-curious.com/wp-content/uploads/2022/12/home-3.svg"
+                                                        alt="">
+                                        </div>
+                                </div>
+                        </div>
+
+                        <div
+                                class="page3 w-full h-auto bg-[#fff6f6] py-[120px] px-[107px] grid grid-cols-2 sticky bottom-0 z-40">
+
+                                <div class="flex items-center justify-start ">
+                                        <img width="460px"
+                                                src="https://eat-curious.com/wp-content/uploads/2022/12/home-5.svg"
+                                                alt="">
+                                </div>
+
                                 <div class="relative flex flex-col items-start justify-center ">
-                                        <img class="absolute -top-20 -right-16 rotate-12"
-                                                src="data:image/svg+xml,%3Csvg width='90px' height='110px' viewBox='0 0 41 64' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.44531 5.56149C9.2181 2.6463 16.7405 1.48086 24.0853 2.21287C28.2019 2.62061 32.4511 3.71542 35.4918 6.5054C38.8555 9.59396 40.232 14.6506 38.7812 18.9784C37.4014 23.0944 33.1587 26.8122 28.6834 26.9856C25.6912 27.1012 21.0899 24.3593 22.8606 20.8309C24.2178 18.1244 28.7642 18.3106 31.2458 18.8596C33.9666 19.4632 36.5032 21.0492 37.9508 23.454C42.956 31.7597 34.3834 39.9916 27.0742 42.788C23.4455 44.1782 19.6326 45.273 15.7356 45.5394C12.3622 45.7706 7.39566 45.5844 5.07559 42.6981C2.04141 38.9257 7.09836 34.8579 10.5849 34.296C18.3562 33.0407 26.2406 38.7234 26.2438 46.7659C26.247 54.9464 18.3368 60.2663 11.0955 62' stroke='%23FFFFFF' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A"
+                                        <img class="absolute top-0 right-5"
+                                                src="data:image/svg+xml,%3Csvg width='115' height='112' viewBox='0 0 115 112' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M100.67 62.1391C101.377 52.5103 99.8571 42.7448 96.3547 33.7521C94.4423 28.8447 92.5155 23.6397 89.1256 19.531C84.0057 13.3221 77.8201 15.8858 75.2787 23.1641C73.3597 28.6607 72.563 34.784 73.5795 40.5302C69.4913 34.4843 64.4857 29.0648 58.785 24.5084C56.6337 22.7869 54.1662 21.1174 51.4114 21.183C48.1803 21.2562 45.4031 23.8197 44.197 26.8168C42.9908 29.8139 43.0658 33.1661 43.3936 36.3831C44.2695 44.8788 46.8133 53.1998 50.8375 60.7341C45.9154 53.3052 34.9981 50.8658 27.1273 55.0456C19.2601 59.2295 15.1601 69.1912 17.2943 77.845C19.4285 86.4989 27.2973 93.2812 36.098 94.6689' stroke='%23FF73B5' stroke-width='2.85782' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A"
                                                 alt="">
                                         <h1
                                                 class="text-[56px] font-extrabold text-[#042f1a] font-[heading] uppercase leading-[50px] tracking-wide">
-                                                curioys...
-                                                by name, by nature</h1>
+                                                INSPIRING GOOD THROUGH TASTY GOODNESS
+
+                                        </h1>
                                         <p
-                                                class="text-[#042f1a] font-[Rubik] text-xl font-light leading-[28.8px] text-left max-w-[392px] mt-[25px]">
-                                                It’s what inspires us to whip up, throw together, tear, shake, and break
-                                                the
-                                                rules – on a mission to redefine food for a new generation.</p>
+                                                class="text-[#042f1a] font-[Rubik] text-xl font-light leading-[28.8px] text-left max-w-[450px] mt-[25px]">
+                                                We’re here to inspire discovery and tempt everyone to eat more plants.
+                                                Because
+                                                we care about the future – yours, ours and the planet’s.
+
+                                        </p>
                                 </div>
-                                <div class="flex items-start justify-center ">
+                        </div>
+
+                        <div
+                                class="page4 w-full h-screen bg-[#d4ed6d] pt-5 pb-[120px] px-[107px] grid grid-cols-2 sticky bottom-0 z-20">
+                                <div class="relative flex flex-col items-start justify-center ">
+                                        <img class="absolute top-8 right-48"
+                                                src="data:image/svg+xml,%3Csvg width='140' height='86' viewBox='0 0 140 86' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M77.4349 13.2582C71.1486 14.6704 65.8632 19.0933 61.2375 24.0994C55.3626 30.4583 50.4083 37.835 49.1764 46.1453C49.1011 46.6533 48.7591 47.082 48.2805 47.2682C47.8019 47.4545 47.2602 47.3698 46.8613 47.0464C37.7182 39.6333 23.0234 41.8906 14.452 50.3059C5.88798 58.7139 2.71456 71.6305 3.19933 84.049C3.23014 84.8381 2.61537 85.5028 1.8262 85.5337C1.03703 85.5645 0.372315 84.9497 0.341509 84.1605C-0.16091 71.2899 3.0973 57.4457 12.4484 48.265C21.25 39.6238 36.251 36.6269 46.7719 43.4511C48.6143 35.2641 53.6142 28.1362 59.1368 22.1586L59.1369 22.1585C63.8608 17.0462 69.6431 12.0773 76.8081 10.4677C83.3046 9.00833 91.2038 11.0737 95.1245 16.7468C100.732 10.2242 107.396 3.76255 116.05 1.5151C120.817 0.274526 126.18 0.846471 130.632 2.92686C135.091 5.01064 138.775 8.68362 139.895 13.7345C140.066 14.5055 139.579 15.2691 138.808 15.4401C138.037 15.611 137.274 15.1245 137.103 14.3535C136.222 10.3791 133.291 7.32669 129.421 5.5179C125.543 3.70583 120.862 3.21796 116.77 4.28308L116.769 4.28328C108.395 6.45805 101.882 13.1087 96.0026 20.1339C95.69 20.5074 95.2088 20.6961 94.7257 20.6347C94.2425 20.5733 93.8238 20.2701 93.6146 19.8303C90.9969 14.3269 83.7248 11.8452 77.4349 13.2582Z' fill='%23042F1A'/%3E%3C/svg%3E%0A"
+                                                alt="">
+                                        <h1
+                                                class="text-[56px] font-extrabold text-[#042f1a] font-[heading] uppercase leading-[50px] tracking-wide">
+                                                POWERED BY POSITIVITY
+                                        </h1>
+                                        <p
+                                                class="text-[#042f1a] font-[Rubik] text-xl font-light leading-[28.8px] text-left max-w-[450px] mt-[25px]">
+                                                We’re not crusading or going up against an industry. We’re for; for
+                                                flavour, for
+                                                fun, for what’s possible.</p>
+                                </div>
+                                <div class="flex items-start justify-end ">
                                         <img width="460px"
-                                                src="https://eat-curious.com/wp-content/uploads/2022/12/home-3.svg"
+                                                src="https://eat-curious.com/wp-content/uploads/2022/12/home-7.svg"
                                                 alt="">
                                 </div>
                         </div>
-                </div>
 
-                <div class="page3 w-full h-auto bg-[#fff6f6] py-[120px] px-[107px] grid grid-cols-2 ">
+                        <div
+                                class="page5 w-full h-auto bg-[#042F1A] py-[120px] px-[107px] grid grid-cols-2 sticky bottom-0 z-10">
 
-                        <div class="flex items-center justify-start ">
-                                <img width="460px" src="https://eat-curious.com/wp-content/uploads/2022/12/home-5.svg"
-                                        alt="">
-                        </div>
+                                <div class="flex items-center justify-start ">
+                                        <img width="460px"
+                                                src="https://eat-curious.com/wp-content/uploads/2022/12/home-4.svg"
+                                                alt="">
+                                </div>
 
-                        <div class="relative flex flex-col items-start justify-center ">
-                                <img class="absolute top-0 right-5"
-                                        src="data:image/svg+xml,%3Csvg width='115' height='112' viewBox='0 0 115 112' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M100.67 62.1391C101.377 52.5103 99.8571 42.7448 96.3547 33.7521C94.4423 28.8447 92.5155 23.6397 89.1256 19.531C84.0057 13.3221 77.8201 15.8858 75.2787 23.1641C73.3597 28.6607 72.563 34.784 73.5795 40.5302C69.4913 34.4843 64.4857 29.0648 58.785 24.5084C56.6337 22.7869 54.1662 21.1174 51.4114 21.183C48.1803 21.2562 45.4031 23.8197 44.197 26.8168C42.9908 29.8139 43.0658 33.1661 43.3936 36.3831C44.2695 44.8788 46.8133 53.1998 50.8375 60.7341C45.9154 53.3052 34.9981 50.8658 27.1273 55.0456C19.2601 59.2295 15.1601 69.1912 17.2943 77.845C19.4285 86.4989 27.2973 93.2812 36.098 94.6689' stroke='%23FF73B5' stroke-width='2.85782' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A"
-                                        alt="">
-                                <h1
-                                        class="text-[56px] font-extrabold text-[#042f1a] font-[heading] uppercase leading-[50px] tracking-wide">
-                                        INSPIRING GOOD THROUGH TASTY GOODNESS
+                                <div class="relative flex flex-col items-start justify-center ">
+                                        <img class="absolute right-0 -bottom-10"
+                                                src="data:image/svg+xml,%3Csvg width='154' height='132' viewBox='0 0 156 133' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.31565 58.0521C2.77985 75.8168 6.00388 93.687 12.7235 110.156C15.2947 116.448 18.6334 122.85 24.4006 126.476C33.1486 131.973 45.2345 129.229 53.054 122.5C60.8734 115.772 65.2253 105.927 68.5733 96.1882C77.6881 69.6997 81.1631 41.2903 78.7103 13.3775C78.2808 8.48454 75.3935 1.97366 70.6849 3.41895C68.0205 4.23919 66.8849 7.30237 66.1815 9.99308C61.389 28.4479 60.1907 47.8277 62.6731 66.7413C64.4103 79.9661 68.4932 93.8579 78.8363 102.322C83.0926 105.803 88.57 108.226 94.0273 107.506C98.9847 106.848 103.269 103.708 106.806 100.18C112.755 94.242 117.086 86.1069 117.961 77.5216C118.712 70.1026 116.603 56.809 109.4 52.5417C100.333 47.1784 100.05 68.2225 100.69 72.4278C101.88 80.2383 105.007 88.7926 110.334 94.788C120.525 106.255 138.159 110.434 152.412 104.751' stroke='%23D4ED6D' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A"
+                                                alt="">
+                                        <h1
+                                                class="text-[56px] font-extrabold text-[#FFF6F6] font-[heading] uppercase leading-[50px] tracking-wide">
+                                                FLAVOURSOME FOOD FOR EVERYONE
 
-                                </h1>
-                                <p
-                                        class="text-[#042f1a] font-[Rubik] text-xl font-light leading-[28.8px] text-left max-w-[450px] mt-[25px]">
-                                        We’re here to inspire discovery and tempt everyone to eat more plants. Because
-                                        we care about the future – yours, ours and the planet’s.
+                                        </h1>
+                                        <p
+                                                class="text-[#FFF6F6] font-[Rubik] text-xl font-light leading-[28.8px] text-left max-w-[450px] mt-[25px]">
+                                                Our curious creations are made for vegans and meat-eaters alike. Because
+                                                meat-free doesn’t mean flavour free.
 
-                                </p>
-                        </div>
-                </div>
-
-                <div class="page4 w-full h-screen bg-[#d4ed6d] pt-5 pb-[120px] px-[107px] grid grid-cols-2 ">
-                        <div class="relative flex flex-col items-start justify-center ">
-                                <img class="absolute top-8 right-48"
-                                        src="data:image/svg+xml,%3Csvg width='140' height='86' viewBox='0 0 140 86' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M77.4349 13.2582C71.1486 14.6704 65.8632 19.0933 61.2375 24.0994C55.3626 30.4583 50.4083 37.835 49.1764 46.1453C49.1011 46.6533 48.7591 47.082 48.2805 47.2682C47.8019 47.4545 47.2602 47.3698 46.8613 47.0464C37.7182 39.6333 23.0234 41.8906 14.452 50.3059C5.88798 58.7139 2.71456 71.6305 3.19933 84.049C3.23014 84.8381 2.61537 85.5028 1.8262 85.5337C1.03703 85.5645 0.372315 84.9497 0.341509 84.1605C-0.16091 71.2899 3.0973 57.4457 12.4484 48.265C21.25 39.6238 36.251 36.6269 46.7719 43.4511C48.6143 35.2641 53.6142 28.1362 59.1368 22.1586L59.1369 22.1585C63.8608 17.0462 69.6431 12.0773 76.8081 10.4677C83.3046 9.00833 91.2038 11.0737 95.1245 16.7468C100.732 10.2242 107.396 3.76255 116.05 1.5151C120.817 0.274526 126.18 0.846471 130.632 2.92686C135.091 5.01064 138.775 8.68362 139.895 13.7345C140.066 14.5055 139.579 15.2691 138.808 15.4401C138.037 15.611 137.274 15.1245 137.103 14.3535C136.222 10.3791 133.291 7.32669 129.421 5.5179C125.543 3.70583 120.862 3.21796 116.77 4.28308L116.769 4.28328C108.395 6.45805 101.882 13.1087 96.0026 20.1339C95.69 20.5074 95.2088 20.6961 94.7257 20.6347C94.2425 20.5733 93.8238 20.2701 93.6146 19.8303C90.9969 14.3269 83.7248 11.8452 77.4349 13.2582Z' fill='%23042F1A'/%3E%3C/svg%3E%0A"
-                                        alt="">
-                                <h1
-                                        class="text-[56px] font-extrabold text-[#042f1a] font-[heading] uppercase leading-[50px] tracking-wide">
-                                        POWERED BY POSITIVITY
-                                </h1>
-                                <p
-                                        class="text-[#042f1a] font-[Rubik] text-xl font-light leading-[28.8px] text-left max-w-[450px] mt-[25px]">
-                                        We’re not crusading or going up against an industry. We’re for; for flavour, for
-                                        fun, for what’s possible.</p>
-                        </div>
-                        <div class="flex items-start justify-end ">
-                                <img width="460px" src="https://eat-curious.com/wp-content/uploads/2022/12/home-7.svg"
-                                        alt="">
-                        </div>
-                </div>
-
-                <div class="page5 w-full h-auto bg-[#042F1A] py-[120px] px-[107px] grid grid-cols-2 ">
-
-                        <div class="flex items-center justify-start ">
-                                <img width="460px" src="https://eat-curious.com/wp-content/uploads/2022/12/home-4.svg"
-                                        alt="">
-                        </div>
-
-                        <div class="relative flex flex-col items-start justify-center ">
-                                <img class="absolute right-0 -bottom-10"
-                                        src="data:image/svg+xml,%3Csvg width='154' height='132' viewBox='0 0 156 133' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.31565 58.0521C2.77985 75.8168 6.00388 93.687 12.7235 110.156C15.2947 116.448 18.6334 122.85 24.4006 126.476C33.1486 131.973 45.2345 129.229 53.054 122.5C60.8734 115.772 65.2253 105.927 68.5733 96.1882C77.6881 69.6997 81.1631 41.2903 78.7103 13.3775C78.2808 8.48454 75.3935 1.97366 70.6849 3.41895C68.0205 4.23919 66.8849 7.30237 66.1815 9.99308C61.389 28.4479 60.1907 47.8277 62.6731 66.7413C64.4103 79.9661 68.4932 93.8579 78.8363 102.322C83.0926 105.803 88.57 108.226 94.0273 107.506C98.9847 106.848 103.269 103.708 106.806 100.18C112.755 94.242 117.086 86.1069 117.961 77.5216C118.712 70.1026 116.603 56.809 109.4 52.5417C100.333 47.1784 100.05 68.2225 100.69 72.4278C101.88 80.2383 105.007 88.7926 110.334 94.788C120.525 106.255 138.159 110.434 152.412 104.751' stroke='%23D4ED6D' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A"
-                                        alt="">
-                                <h1
-                                        class="text-[56px] font-extrabold text-[#FFF6F6] font-[heading] uppercase leading-[50px] tracking-wide">
-                                        FLAVOURSOME FOOD FOR EVERYONE
-
-                                </h1>
-                                <p
-                                        class="text-[#FFF6F6] font-[Rubik] text-xl font-light leading-[28.8px] text-left max-w-[450px] mt-[25px]">
-                                        Our curious creations are made for vegans and meat-eaters alike. Because
-                                        meat-free doesn’t mean flavour free.
-
-                                </p>
+                                        </p>
+                                </div>
                         </div>
                 </div>
 
@@ -947,7 +981,7 @@
                                         alt="">
                         </div>
 
-                        <div class="relative flex flex-col items-start justify-center  pl-28">
+                        <div class="relative flex flex-col items-start justify-center pl-28">
 
                                 <h1
                                         class="text-[68px] font-extrabold text-[#fff6f6] font-[heading] uppercase leading-[58px] tracking-wide mb-[34px]">
@@ -979,17 +1013,117 @@
                                         src="https://eat-curious.com/wp-content/uploads/2023/07/afro-fusion-spice-bowl.jpg"
                                         alt="">
                         </div>
-                        <div class="w-[392px] h-[697px]">
+                        <div class="w-[392px] h-[697px] relative">
+                                <div
+                                        class="absolute badge badge-lg rounded-[4px] pt-[5px] px-[12.6px] pb-[10.8px] top-4 right-4 font-[Rubik] text-[#042F1A] bg-[#1ABE71] font-extrabold rotate-6 border-none z-10">
+                                        TENDERS</div>
+                                <div class="absolute w-full h-full bg-black/25 rounded-btn"></div>
                                 <img class="object-cover w-full h-full rounded-btn"
                                         src="https://eat-curious.com/wp-content/uploads/2023/07/auto-draft-2.jpg"
                                         alt="">
                         </div>
-                        <div class="w-[392px] h-[697px]">
+                        <div class="w-[392px] h-[697px] relative">
+                                <div
+                                        class="absolute badge badge-lg rounded-[4px] pt-[5px] px-[12.6px] pb-[10.8px] top-4 right-4 font-[Rubik] text-[#042F1A] bg-[#1ABE71] font-extrabold rotate-6 border-none z-10">
+                                        FILLETS</div>
+                                <div class="absolute w-full h-full bg-black/25 rounded-btn"></div>
                                 <img class="object-cover w-full h-full rounded-btn"
                                         src="https://eat-curious.com/wp-content/uploads/2023/07/auto-draft-3.jpg"
                                         alt="">
                         </div>
                 </div>
+
+
+                <div
+                        class="page10 sticky top-0 py-[70px] px-[107px] bg-[#fff6f6] flex flex-col items-center justify-center w-full h-screen">
+                        <div class="w-full h-auto">
+                                <p
+                                        class="uppercase text-[#042F1A] text-[88px] font-extrabold mb-[44px] text-center font-[heading]">
+                                        intrigued?</p>
+                        </div>
+                        <div class="relative flex flex-col items-center">
+                                <button
+                                        class="absolute top-5 bg-[#FF73B5] text-[#042F1A] uppercase font-[Teko] rounded-[4px] text-2xl font-extrabold leading-[28px] tracking-[0.24px] pt-[5px] px-[16.8px] pb-[8px]">let's
+                                        chat</button>
+                                <img width="303px" src="https://eat-curious.com/wp-content/uploads/2022/12/home-6.svg"
+                                        alt="">
+                        </div>
+                </div>
+
+                <footer class="relative z-[101] w-full h-auto overflow-hidden footer-bottom ">
+                        <div class="w-full flex items-center justify-center z-50 my-[90px]">
+                                <svg class="fill-[#042F1A] z-10" width="1224" height="314" viewBox="0 0 1224 314"
+                                        xmlns="http://www.w3.org/2000/svg" class="">
+                                        <g clip-path="url(#clip0_816_18455)">
+                                                <path d="M44.214 230.312C44.2777 232.47 44.3095 233.549 44.3731 235.707C57.5076 231.36 70.4932 227.069 81.7341 222.929C82.1778 239.219 82.8793 255.501 83.5741 271.782C72.5307 273.108 59.4866 274.799 46.481 276.599C47.2829 288.323 48.0933 300.114 48.912 311.969C32.6081 312.095 16.3042 312.229 0.00195312 312.366C0.286577 292.976 0.435585 273.572 0.435585 254.192C0.435585 234.913 0.469071 215.604 0.00195312 196.316C26.0283 178.069 52.4916 160.867 79.7367 144.505C79.8456 152.208 80.1134 163.675 80.5286 173.466C80.9171 182.594 81.56 192.518 81.8446 199.199C68.6933 204.098 54.9845 209.526 43.7436 214.321C43.9328 220.717 44.0265 223.913 44.2157 230.309L44.214 230.312Z"
+                                                        fill="#042F1A"></path>
+                                                <path d="M174.597 95.1318C174.719 101.852 175.307 113.073 175.787 122.278C176.315 132.351 176.931 144.147 177.532 151.265C162.229 156.14 146.59 161.529 133.939 166.328C134.403 175.489 134.636 180.072 135.099 189.233C149.595 184.611 164.841 179.76 177.428 175.55C178.026 191.839 178.896 208.116 179.753 224.393C167.49 226.092 152.112 228.836 137.263 231.924L138.463 255.609C151.577 253.681 168.122 251.367 182.652 249.142C183.058 256.914 183.477 269.313 184.05 280.249C184.592 290.61 185.453 302.689 185.888 311.037C155.622 311.22 125.357 311.416 95.0897 311.628C94.3262 282.972 92.9969 254.327 91.7228 225.694C90.452 197.133 89.2398 168.555 87.4668 140.014C115.73 123.639 144.894 108.713 174.597 95.1335V95.1318Z"
+                                                        fill="#042F1A"></path>
+                                                <path d="M274.793 55.4194C274.93 63.3168 275.555 76.5786 276.065 87.4563C276.626 99.3585 277.281 113.3 277.912 121.742C262.243 125.341 246.198 129.41 233.201 133.18C233.767 144.401 234.052 150.011 234.617 161.231C249.445 157.599 265.015 153.728 277.86 150.271C278.51 169.528 279.437 188.776 280.353 208.019C267.925 209.076 252.331 211.082 237.259 213.506C237.845 225.109 238.138 230.91 238.724 242.511C251.978 240.996 268.689 239.199 283.353 237.383C283.785 246.564 284.244 261.206 284.852 274.129C285.428 286.371 286.329 300.649 286.792 310.511C256.512 310.65 226.233 310.805 195.952 310.974C194.573 274.209 192.57 237.465 190.652 200.728C188.734 164.045 186.941 127.34 184.443 90.6876C214.203 77.8125 244.186 66.1061 274.793 55.416V55.4194Z"
+                                                        fill="#042F1A"></path>
+                                                <path d="M344.115 34.6255C408.401 15.2762 404.661 118.782 405.896 154.861C407.316 196.29 422.264 310.893 354.08 310.243C335.005 310.314 315.932 310.389 296.857 310.469C295.417 267.461 293.587 224.446 291.612 181.483C289.628 138.347 287.521 95.1717 284.953 52.0428C304.498 45.6589 324.229 39.8509 344.115 34.6255ZM359.119 166.698C358.579 152.944 361.212 96.7924 341.466 98.5269C339.375 98.711 336.808 99.508 334.727 100.317C335.259 124.93 336.277 149.533 337.282 174.123C338.183 196.141 339.043 218.176 340.219 240.189C342.306 240.398 344.779 240.363 346.911 240.062C367.62 237.139 359.655 180.353 359.118 166.698H359.119Z"
+                                                        fill="#042F1A"></path>
+                                                <path d="M547.997 309.813C548.277 275.209 548.331 240.59 548.064 206.01C547.878 181.801 548.505 157.561 548.96 133.339C548.488 133.192 548.252 133.118 547.778 132.973C545.92 155.881 544.07 178.79 541.727 201.656C537.659 237.707 533.644 273.766 529.679 309.829C522.169 309.838 518.413 309.843 510.904 309.853C505.731 273.9 500.477 237.96 495.139 202.031C492.221 180.006 489.633 157.936 487.071 135.867C486.604 136.062 486.371 136.16 485.904 136.356C486.884 160.357 488.365 184.498 488.975 208.351C489.834 241.977 491.024 276.041 492.127 309.883C476.374 309.908 468.497 309.925 452.746 309.958C451.999 260.36 450.892 210.75 449.623 161.184C448.361 111.9 446.928 62.5819 445.355 13.2867C465.678 10.037 486.093 7.38331 506.57 5.32732C510.397 37.5886 513.936 69.8799 517.867 102.129C519.585 121.059 520.864 140.031 522.239 158.987C522.708 158.965 522.942 158.955 523.411 158.935C524.39 139.83 525.209 120.71 526.383 101.615C529.36 68.7163 532.566 35.8222 534.893 2.86951C553.762 1.66572 572.517 0.796784 591.416 0.250977C591.27 51.7025 591.285 103.166 591.446 154.606C591.608 206.32 591.664 258.066 592.65 309.784C574.789 309.789 565.858 309.794 547.997 309.809V309.813Z"
+                                                        fill="#042F1A" class=""></path>
+                                                <path d="M699.191 3.65824C698.823 13.024 698.605 28.9496 698.428 42.0088C698.233 56.2985 698.004 73.0411 698.103 83.2591C681.978 81.8443 665.356 80.7176 651.81 80.3258C651.717 94.8265 651.671 102.078 651.578 116.58C666.935 116.957 682.996 117.19 696.223 117.071C695.611 140.204 695.362 163.35 695.056 186.489C682.458 185.238 666.576 184.396 651.15 184.143C651.054 199.138 651.008 206.635 650.912 221.63C664.387 221.787 681.34 222.088 696.204 222.057C696.053 233.077 695.581 250.628 695.37 266.145C695.169 280.845 695.166 297.992 695.004 309.829C664.701 309.799 634.399 309.783 604.097 309.783C604.565 258.165 604.428 206.543 604.364 154.927C604.301 103.315 604.338 51.6943 603.691 0.0820312C635.638 0.147327 667.335 1.33437 699.191 3.65489V3.65824Z"
+                                                        fill="#042F1A" class=""></path>
+                                                <path d="M834.204 310.126C835.932 278.201 837.488 246.265 838.705 214.333C839.555 192.056 841.191 169.792 842.684 147.539C842.224 147.326 841.993 147.218 841.533 147.005C838.755 167.916 835.89 188.821 832.6 209.657C826.923 243.111 821.374 276.586 815.888 310.072C808.379 310.051 804.625 310.041 797.116 310.022C793.527 275.052 789.912 240.085 786.269 205.122C784.355 183.314 782.79 161.477 781.263 139.64C780.791 139.752 780.554 139.809 780.081 139.921C779.957 163.493 780.277 187.175 779.843 210.637C779.232 243.599 778.75 276.86 778.343 309.979C762.591 309.942 754.714 309.927 738.961 309.898C740.531 259.552 741.745 209.175 742.793 158.835C743.836 108.753 744.71 58.6293 745.444 8.52051C765.875 11.124 786.229 14.3268 806.472 18.1224C808.782 49.6838 810.847 81.2586 813.318 112.81C814.174 130.966 814.605 149.143 815.131 167.309C815.597 167.355 815.829 167.381 816.295 167.427C818.103 149.615 819.75 131.779 821.756 113.987C826.106 83.934 830.705 53.8995 834.434 23.7596C852.984 27.9452 871.326 32.4255 889.718 37.2625C887.568 82.6147 885.569 127.985 883.717 173.338C881.855 218.961 879.91 264.615 878.843 310.278C860.989 310.213 852.062 310.183 834.204 310.128V310.126Z"
+                                                        fill="#042F1A" class=""></path>
+                                                <path d="M945.741 313.915C881.858 313.813 891.313 207.23 892.994 168.487C894.502 133.695 895.905 32.3069 958.119 55.055C1011.95 74.7375 1014.58 142.17 1011.61 190.452C1009.08 231.694 1004.5 314.009 945.739 313.915H945.741ZM964.159 180.35C964.898 164.849 968.566 118.196 955.242 115.234C942.968 112.507 940.601 164.625 940.062 175.884C939.233 193.143 937.76 246.017 948.942 247.013C959.81 247.981 963.406 196.193 964.161 180.351L964.159 180.35Z"
+                                                        fill="#042F1A"></path>
+                                                <path d="M1098.59 235.696C1115.8 241.276 1123.48 257.106 1124.45 274.038C1125.13 286.056 1126.32 302.867 1127.3 311.616C1111.21 311.501 1103.16 311.447 1087.06 311.34C1080.88 311.3 1079.34 307.888 1078.86 297.067C1078.31 284.552 1082.46 248.946 1069.23 244.517C1067.05 243.786 1064.71 243.787 1061.99 243.354C1061.26 265.953 1060.48 288.557 1060.75 311.173C1045.05 311.076 1029.34 310.984 1013.63 310.897C1016.12 273.231 1018.23 235.52 1020.19 197.849C1022.15 160.108 1023.96 122.307 1025.39 84.5137C1046.19 93.4006 1066.7 102.962 1086.88 113.179C1117.13 128.101 1130.68 155.683 1129.46 188.42C1128.74 208.007 1124.4 236.004 1098.66 234.182C1098.63 234.787 1098.61 235.09 1098.58 235.694L1098.59 235.696ZM1085.6 182.849C1086.77 159.735 1083.21 154.262 1074.75 150.982C1073.19 150.377 1066.85 147.836 1066.49 148.094C1063.16 150.449 1064.51 186.015 1063.76 204.986C1066.22 205.874 1069.37 206.654 1072.97 207.56C1081.06 209.599 1084.53 203.863 1085.6 182.848V182.849Z"
+                                                        fill="#042F1A"></path>
+                                                <path d="M1224 196.32C1223.79 199.731 1223.79 205.778 1223.79 210.734C1223.79 216.157 1223.79 222.515 1224 226.492C1209.64 218.918 1194.72 211.395 1182.48 205.607C1182.28 212.331 1182.19 215.693 1182 222.418C1196.1 227.994 1210.74 233.889 1222.72 238.779C1222.5 244.922 1222.48 258.196 1222.47 265.221C1210.63 261.663 1195.69 257.469 1181.1 253.747C1180.9 260.7 1180.8 264.176 1180.6 271.129C1193.55 273.455 1209.81 276.477 1224 279.102C1224 283.279 1223.78 289.903 1223.77 295.791C1223.77 301.37 1224 307.884 1224 312.371C1193.75 312.12 1163.5 311.882 1133.25 311.661C1134.98 283.509 1136.16 255.319 1137.38 227.145C1138.6 198.902 1139.89 170.645 1140.62 142.379C1169.27 158.947 1197.09 177.056 1224 196.322V196.32Z"
+                                                        fill="#042F1A"></path>
+                                        </g>
+                                        <defs>
+                                                <clipPath id="clip0_816_18455">
+                                                        <rect width="1224" height="313.829" fill="white"
+                                                                transform="translate(0 0.0849609)"></rect>
+                                                </clipPath>
+                                        </defs>
+                                </svg>
+                        </div>
+
+                        <div class="relative z-50 flex flex-col items-center justify-center w-full h-auto bg-[#FF73B5]">
+                                <div class="w-full h-auto flex items-center mb-[150px] z-50">
+                                        <form class="z-30 flex items-center w-full px-[107px] gap-4">
+                                                <input class="bg-[#FFF6F6] rounded-[4px] pt-[12.6px] pb-[18px] px-[23.4px]
+                                                max-w-[493px] w-[493px] shadow font-[Rubik] font-medium text-lg outline-none text-black"
+                                                        type="text" placeholder="FULL NAME" name="user" />
+                                                <input class="bg-[#FFF6F6] rounded-[4px] pt-[12.6px] pb-[18px] px-[23.4px]
+                                                 max-w-[493px] w-[493px] shadow font-[Rubik] font-medium text-lg outline-none text-black"
+                                                        type="email" placeholder="EMAIL ADDRESS">
+                                                <button
+                                                        class="bg-[#042F1A] rounded-[4px] pt-[12.6px] pb-[18px] px-[23.4px] font-[Rubik] font-medium">SIGN
+                                                        UP</button>
+                                        </form>
+                                </div>
+
+                                <div class="z-50 flex items-center justify-between w-full bg-[#FF73B5] 
+                                         px-[107px] absolute top-20 border-t border-[#E56CA6] pt-5 my-5">
+
+                                        <div class="z-50 flex items-center gap-3">
+                                                <img src="data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 19 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.50557 1.71108C12.0453 1.71108 12.3461 1.72221 13.3449 1.76675C14.2732 1.80758 14.7745 1.96347 15.1087 2.09338C15.5505 2.26411 15.8698 2.47197 16.2003 2.80231C16.5345 3.13635 16.7387 3.45185 16.9095 3.89353C17.0395 4.22758 17.1954 4.73237 17.2363 5.65657C17.2808 6.65872 17.292 6.95937 17.292 9.49443C17.292 12.0332 17.2808 12.3339 17.2363 13.3323C17.1954 14.2602 17.0395 14.7613 16.9095 15.0953C16.7387 15.537 16.5308 15.8562 16.2003 16.1866C15.8661 16.5206 15.5505 16.7248 15.1087 16.8955C14.7745 17.0254 14.2695 17.1813 13.3449 17.2221C12.3424 17.2667 12.0416 17.2778 9.50557 17.2778C6.9658 17.2778 6.66504 17.2667 5.66621 17.2221C4.73793 17.1813 4.23666 17.0254 3.90248 16.8955C3.46062 16.7248 3.14129 16.5169 2.81083 16.1866C2.47665 15.8525 2.27243 15.537 2.10162 15.0953C1.97166 14.7613 1.81571 14.2565 1.77487 13.3323C1.73031 12.3301 1.71917 12.0295 1.71917 9.49443C1.71917 6.95566 1.73031 6.65501 1.77487 5.65657C1.81571 4.72866 1.97166 4.22758 2.10162 3.89353C2.27243 3.45185 2.48036 3.13264 2.81083 2.80231C3.14501 2.46826 3.46062 2.26411 3.90248 2.09338C4.23666 1.96347 4.74165 1.80758 5.66621 1.76675C6.66504 1.72221 6.9658 1.71108 9.50557 1.71108ZM9.50557 0C6.92496 0 6.60192 0.011135 5.58824 0.0556749C4.57827 0.100215 3.88392 0.263528 3.28239 0.497363C2.65488 0.742332 2.1239 1.06525 1.59664 1.59601C1.06566 2.12307 0.742623 2.65384 0.497557 3.2774C0.263631 3.8824 0.100254 4.57277 0.0556967 5.58234C0.0111393 6.59934 0 6.92225 0 9.50186C0 12.0815 0.0111393 12.4044 0.0556967 13.4177C0.100254 14.4272 0.263631 15.1213 0.497557 15.7226C0.742623 16.3499 1.06566 16.8806 1.59664 17.4077C2.1239 17.9348 2.65488 18.2614 3.27868 18.5026C3.88392 18.7365 4.57456 18.8998 5.58452 18.9443C6.5982 18.9889 6.92124 19 9.50186 19C12.0825 19 12.4055 18.9889 13.4192 18.9443C14.4292 18.8998 15.1235 18.7365 15.725 18.5026C16.3488 18.2614 16.8798 17.9348 17.4071 17.4077C17.9343 16.8806 18.2611 16.3499 18.5024 15.7263C18.7364 15.1213 18.8997 14.4309 18.9443 13.4214C18.9889 12.4081 19 12.0852 19 9.50557C19 6.92596 18.9889 6.60305 18.9443 5.58976C18.8997 4.58019 18.7364 3.88611 18.5024 3.28482C18.2685 2.65384 17.9455 2.12307 17.4145 1.59601C16.8872 1.06896 16.3563 0.742333 15.7325 0.501074C15.1272 0.26724 14.4366 0.103927 13.4266 0.0593866C12.4092 0.011135 12.0862 0 9.50557 0Z' fill='%23042f1a'/%3E%3Cpath d='M9.5 5C6.73954 5 4.5 7.23954 4.5 10C4.5 12.7605 6.73954 15 9.5 15C12.2605 15 14.5 12.7605 14.5 10C14.5 7.23954 12.2605 5 9.5 5ZM9.5 13.2433C7.70913 13.2433 6.25665 11.7909 6.25665 10C6.25665 8.20913 7.70913 6.75665 9.5 6.75665C11.2909 6.75665 12.7433 8.20913 12.7433 10C12.7433 11.7909 11.2909 13.2433 9.5 13.2433Z' fill='%23042f1a'/%3E%3Cpath d='M15 4C15 4.55375 14.5505 5 14 5C13.4463 5 13 4.55049 13 4C13 3.44625 13.4495 3 14 3C14.5505 3 15 3.44951 15 4Z' fill='%23042f1a'/%3E%3C/svg%3E%0A"
+                                                        alt="">
+                                                <img src="data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 10C20 4.48 15.52 0 10 0C4.48 0 0 4.48 0 10C0 14.84 3.44 18.87 8 19.8V13H6V10H8V7.5C8 5.57 9.57 4 11.5 4H14V7H12C11.45 7 11 7.45 11 8V10H14V13H11V19.95C16.05 19.45 20 15.19 20 10Z' fill='%23042F1A'/%3E%3C/svg%3E%0A"
+                                                        alt="">
+                                                <img src="data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 72 72' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M64 72H8C3.58172 72 0 68.4183 0 64V8C0 3.58172 3.58172 0 8 0H64C68.4183 0 72 3.58172 72 8V64C72 68.4183 68.4183 72 64 72ZM51.3156 62H62V40.0512C62 30.7645 56.7357 26.2742 49.3826 26.2742C42.026 26.2742 38.9301 32.0029 38.9301 32.0029V27.3333H28.6333V62H38.9301V43.8021C38.9301 38.9261 41.1746 36.0245 45.4707 36.0245C49.4198 36.0245 51.3156 38.8128 51.3156 43.8021V62ZM10 16.397C10 19.9297 12.8421 22.794 16.3493 22.794C19.8566 22.794 22.697 19.9297 22.697 16.397C22.697 12.8644 19.8566 10 16.3493 10C12.8421 10 10 12.8644 10 16.397ZM21.7694 62H11.0326V27.3333H21.7694V62Z' fill='%23042F1A'/%3E%3C/svg%3E%0A"
+                                                        alt="">
+                                                <p
+                                                        class="uppercase text-[#042F1A] font-[Rubik] font-medium leading-[21px]">
+                                                        privacy policy</p>
+                                        </div>
+
+                                        <div class="z-50">
+                                                <p
+                                                        class="uppercase text-[#042F1A] font-[Rubik] font-medium leading-[21px]">
+                                                        © EAT CURIOUS 2024 | DEVELOPED BY SHREE</p>
+                                        </div>
+                                </div>
+                        </div>
+                </footer>
+
         </div>
 
 
@@ -1000,7 +1134,9 @@
 
 
 
-        <span id="sticker" class=""></span>
+
+
+        <span id="sticker" class="z-10"></span>
 
         <div class="fixed bottom-0 flex ticker">
                 <div class="flex items-center gap-10 text-xl ticker__tape"><span class="flex items-center gap-10">100%
